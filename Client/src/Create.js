@@ -1,7 +1,7 @@
-const API = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
 const Create = () => {
     const [task, setTask] = useState('');

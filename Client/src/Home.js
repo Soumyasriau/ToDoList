@@ -1,9 +1,9 @@
-const API = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 import React, { useEffect, useState } from 'react';
 import Create from './Create';
 import './App.css';
 import axios from 'axios';
 import { BsCircleFill, BsFillCheckCircleFill, BsFillTrashFill, BsPencil } from 'react-icons/bs';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
 const Home = () => {
     const [todos, setTodos] = useState([]);
