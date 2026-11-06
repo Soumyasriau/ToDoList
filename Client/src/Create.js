@@ -1,4 +1,5 @@
-﻿import React, { useState } from 'react';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:5001';
+import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
 
@@ -7,7 +8,7 @@ const Create = () => {
     const [dueDate, setDueDate] = useState('');
 
     const createTask = () => {
-        axios.post('http://localhost:5001/add', { task: task.trim(), dueDate: dueDate || null })
+        axios.post(`${API}/add`, { task: task.trim(), dueDate: dueDate || null })
             .then(result => {
                 console.log(result.data);
                 window.location.reload();
